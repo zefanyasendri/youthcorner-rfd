@@ -1,14 +1,20 @@
 import './assets/css/app.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Homepage from './pages/HomePage'
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline">
-        Hero
-      </h1>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          {/* tambahkan Route lainnya di sini */}
+        </Routes>
+      </Router>
     </>
   )
+  
 }
 
 export default App
