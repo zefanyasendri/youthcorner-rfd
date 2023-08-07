@@ -3,8 +3,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Header from '../parts/Header.jsx'
 import Breadcrumb from '../components/Breadcrumb/index.jsx'
-import Footer from '../parts/HomePage/Footer.jsx'
-import Sitemap from '../parts/HomePage/Sitemap.jsx'
+import Footer from '../parts/Footer.jsx'
+import Sitemap from '../parts/Sitemap.jsx'
 
 export default function Congratulation() {
     return (

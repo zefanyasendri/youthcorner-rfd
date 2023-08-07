@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from '../parts/Header.jsx'
-import Sitemap from '../parts/HomePage/Sitemap.jsx'
-import Footer from '../parts/HomePage/Footer.jsx'
+import Sitemap from '../parts/Sitemap.jsx'
+import Footer from '../parts/Footer.jsx'
 import PageErrorMessage from '../parts/PageErrorMessage.jsx'
 
 export default function NotFound() {

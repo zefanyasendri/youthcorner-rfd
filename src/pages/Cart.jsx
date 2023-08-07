@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from '../parts/Header.jsx'
 import Breadcrumb from '../components/Breadcrumb/index.jsx'
-import Footer from '../parts/HomePage/Footer.jsx'
-import Sitemap from '../parts/HomePage/Sitemap.jsx'
+import Footer from '../parts/Footer.jsx'
+import Sitemap from '../parts/Sitemap.jsx'
 import ShoppingCart from '../parts/Cart/ShoppingCart.jsx'
 import ShippingDetails from '../parts/Cart/ShippingDetails.jsx'
 
