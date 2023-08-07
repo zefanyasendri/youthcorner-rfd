@@ -1,6 +1,10 @@
 import './assets/css/app.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Homepage from './pages/HomePage'
+import Details from './pages/Details'
+import Cart from './pages/Cart'
+import Congratulation from './pages/Congratulation'
+import NotFound from './pages/NotFound'
 
 function App() {
 
@@ -8,8 +12,11 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          {/* tambahkan Route lainnya di sini */}
+          <Route exact path="/" element={<Homepage />} />
+          <Route path="/categories/:idc" element={<Details />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/congratulation" element={<Congratulation />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
     </>
