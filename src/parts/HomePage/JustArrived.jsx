@@ -19,14 +19,13 @@ function Loading() {
 import Carousel from '../../components/Carousel'
 
 export default function JustArrived() {
-    const {data, status, error, run, isLoading} = useAsync()
+    const {data, error, run, isLoading} = useAsync()
     const refContainer = useRef(null)
 
     useEffect(() => {
         run(fetch({ url: "/api/products/?page=1&limit=10" }));
     }, [run]);
 
-    console.log(data, status, error)
 
     return (
         <React.Fragment>

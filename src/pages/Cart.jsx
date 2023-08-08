@@ -6,7 +6,7 @@ import Sitemap from '../parts/Sitemap.jsx'
 import ShoppingCart from '../parts/Cart/ShoppingCart.jsx'
 import ShippingDetails from '../parts/Cart/ShippingDetails.jsx'
 
-export default function Homepage() {
+export default function Cart() {
     return (
         <React.Fragment>
             <Header theme="black" position=""/>
