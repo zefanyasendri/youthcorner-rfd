@@ -2,7 +2,7 @@ import React, {createContext, useContext, useReducer} from 'react'
 
 const Context = createContext()
 const initialState = {
-    cart: { ada: true}
+    cart: {}
 }
 
 export function useGlobalContext() {
@@ -27,6 +27,20 @@ function Reducer(state, action) {
                     [action.item.id]: action.item
                 } 
                 : { [action.item.id]: action.item }
+            }
+        case "REMOVE_FROM_CART":
+            return {
+                ...state,
+                cart: Object.keys(state.cart).filter( key => +key !== +action.id).reduce((acc, key) => {
+                    const item = state.cart[key]
+                    acc[item.id] = item
+                    return acc
+                }, {})
+            }
+        case "RESET_CART":
+            return {
+                ...state,
+                cart: initialState.cart
             }
         default:
             throw new Error(`Unknown action: ${action.type}`)

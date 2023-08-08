@@ -1,10 +1,12 @@
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
+import Document from '../parts/Document.jsx'
 import Header from '../parts/Header.jsx'
 import Breadcrumb from '../components/Breadcrumb/index.jsx'
 import Sitemap from '../parts/Sitemap.jsx'
 import Footer from '../parts/Footer.jsx'
 import ProductDetails from '../parts/Details/ProductDetails.jsx'
 import Suggestion from '../parts/Details/Suggestion.jsx'
+import PageErrorMessage from '../parts/PageErrorMessage.jsx'
 
 import { useParams } from 'react-router-dom'
 import useAsync from '../helpers/hooks/useAsync'
@@ -93,14 +95,14 @@ function LoadingSuggestion() {
 
 export default function Details() {
     const {idp} = useParams()
-    const {data, run, isLoading} = useAsync()
+    const {data, error, run, isLoading, isError} = useAsync()
     
     useEffect(() => {
         run(fetch({ url: `/api/products/${idp}` }));
-    }, [run, idp]);
+    }, [run, idp])
 
     return (
-        <React.Fragment>
+        <Document>
             <Header theme="black" position=""/>
 
             <Breadcrumb list={[
@@ -109,18 +111,23 @@ export default function Details() {
                 { url: "/categories/91231/products/1231", name: "Details" },
             ]} />
 
-            {isLoading 
-                ? <LoadingProductDetails /> 
-                : <ProductDetails data={data} />
-            }
+            {isError
+                ? <PageErrorMessage title="Product Not Found" body={error.errors.message}/>
+                : <>
+                    {isLoading 
+                        ? <LoadingProductDetails /> 
+                        : <ProductDetails data={data} />
+                    }
 
-            {isLoading 
-                ? <LoadingSuggestion />
-                :<Suggestion data={data?.relatedProducts || {}}/>
+                    {isLoading 
+                        ? <LoadingSuggestion />
+                        :<Suggestion data={data?.relatedProducts || {}}/>
+                    }
+                </>
             }
 
             <Sitemap/>
             <Footer/>
-        </React.Fragment>
+        </Document>
     )
 }

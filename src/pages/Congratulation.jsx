@@ -1,14 +1,13 @@
-import React from 'react'
-
 import { Link } from 'react-router-dom'
 import Header from '../parts/Header.jsx'
 import Breadcrumb from '../components/Breadcrumb/index.jsx'
 import Footer from '../parts/Footer.jsx'
 import Sitemap from '../parts/Sitemap.jsx'
+import Document from '../parts/Document.jsx'
 
 export default function Congratulation() {
     return (
-        <React.Fragment>
+        <Document>
             <Header theme="black" position=""/>
 
             <Breadcrumb list={[
@@ -45,6 +44,6 @@ export default function Congratulation() {
             <Sitemap/>
             <Footer/>
 
-        </React.Fragment>
+        </Document>
     )
 }

@@ -1,12 +1,12 @@
-import React from 'react'
 import Header from '../parts/Header.jsx'
 import Sitemap from '../parts/Sitemap.jsx'
 import Footer from '../parts/Footer.jsx'
 import PageErrorMessage from '../parts/PageErrorMessage.jsx'
+import Document from '../parts/Document.jsx'
 
 export default function NotFound() {
     return (
-        <React.Fragment>
+        <Document>
             <Header theme="black" position=""/>
 
             <PageErrorMessage/>
@@ -14,6 +14,6 @@ export default function NotFound() {
             <Sitemap/>
             <Footer/>
 
-        </React.Fragment>
+        </Document>
     )
 }

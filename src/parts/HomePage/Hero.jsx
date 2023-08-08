@@ -44,14 +44,14 @@ export default function Hero() {
                         alt="hero 1"
                         className="absolute inset-0 md:relative w-full h-full object-cover object-center"
                     /> */}
-                    <div className="relative">
+                    {/* <div className="relative"> */}
                         <img
                             src="images/content/image-section-1.png"
                             alt="hero 1"
                             className="absolute inset-0 md:relative w-full h-full object-cover object-center"
                         />
-                        <div className="absolute inset-0 bg-black opacity-40"></div>
-                    </div>
+                        <div className="absolute inset-0 bg-black opacity-20"></div>
+                    {/* </div> */}
                     </div>
                 </div>
             </section>

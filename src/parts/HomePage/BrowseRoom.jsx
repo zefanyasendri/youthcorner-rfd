@@ -2,6 +2,7 @@ import React, {useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import useAsync from '../../helpers/hooks/useAsync'
 import fetch from '../../helpers/fetch'
+import '../../helpers/format/thousand.jsx'
 
 function Loading({ratio = {}}) {
     const dummy = [
@@ -113,7 +114,7 @@ export default function BrowseRoom() {
                                         </div>
                                         <div className={`overlay ${ratioClassNames?.meta?.[item.ratio.md]}`}>
                                             <h5 className="text-lg font-semibold">{item.title}</h5>
-                                            <span className="">{item.products} item{item.producst > 1 ? "s": ""}</span>
+                                            <span className="">{item.products.thousand()} item{item.producst > 1 ? "s": ""}</span>
                                         </div>
                                         {/* no mockup */}
                                         <Link to="/categories" className="stretched-link">
