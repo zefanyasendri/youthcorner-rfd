@@ -43,7 +43,7 @@
 }
 
 .overlay .video {
-  @apply absolute transform bg-blue-200 bg-no-repeat bg-center w-20 h-20 rounded-full items-center justify-center flex -translate-x-1/2 -translate-y-1/2;
+  @apply absolute transform bg-blue-400 bg-no-repeat bg-center w-20 h-20 rounded-full items-center justify-center flex -translate-x-1/2 -translate-y-1/2;
   background-image: url("../images/icon-play.svg#icon-play");
   top: 50%;
   left: 50%;

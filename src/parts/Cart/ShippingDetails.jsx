@@ -196,7 +196,7 @@ export default function ShippingDetails() {
                             <button
                                 type="submit"
                                 disabled={!isSubmitDisabled}
-                                className="bg-pink-400 text-black hover:bg-black hover:text-pink-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
+                                className="bg-blue-400 text-black hover:bg-black hover:text-blue-400 focus:outline-none w-full py-3 rounded-full text-lg focus:text-black transition-all duration-200 px-6"
                             >
                                 Checkout Now
                             </button>

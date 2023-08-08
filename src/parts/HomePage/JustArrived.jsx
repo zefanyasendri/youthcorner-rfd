@@ -34,7 +34,9 @@ export default function JustArrived() {
                 <div className="container mx-auto mb-4">
                     <div className="flex justify-center text-center mb-4">
                     <h3 className="text-2xl capitalize font-semibold">
-                        Just Arrived <br className="" />this summer for you
+                        Fresh Arrivals
+                        <br className="" />
+                        This Season, Just for You
                     </h3>
                     </div>
                 </div>
