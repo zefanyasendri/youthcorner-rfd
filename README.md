@@ -1,4 +1,6 @@
-
+<p align="left">
+    <img src="https://github.com/zefanyasendri/youthcorner-rfd/blob/main/public/images/screenshot/logoYC.png" alt="Logo" width="150" height="150">
+</p>
 # YouthCorner
 
 Youth Corner, a marketplace website designed for youth church organizations, crafted using ReactJS, Tailwind CSS, and hosted on Netlify, with Postman for seamless API testing and integration.
